@@ -26,7 +26,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. Running the scraper produces a valid menu.json with pizza name, description, price (integer NOK), and vegetarian flag for each item
   2. A build that returns 0 pizza items fails loudly with a clear error (no silent empty data)
   3. menu.json is listed in .gitignore and not tracked in version control
-**Plans**: TBD
+**Plans**: 2 plans
+- [x] 01-01-PLAN.md — Environment setup, Astro scaffold, and .gitignore for DATA-04
+- [ ] 01-02-PLAN.md — Scraper implementation + prebuild wiring for DATA-01/02/03
 
 ### Phase 2: App & Filters
 **Goal**: Users can open the app, spin for a random pizza, and filter by diet preference
@@ -58,6 +60,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Pipeline | 0/TBD | Not started | - |
+| 1. Data Pipeline | 1/2 | In Progress|  |
 | 2. App & Filters | 0/TBD | Not started | - |
 | 3. Deployment | 0/TBD | Not started | - |
