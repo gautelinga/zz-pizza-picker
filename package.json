@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "scrape": "node scripts/scrape.js",
+    "prebuild": "npm run scrape",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
