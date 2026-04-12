@@ -61,14 +61,18 @@ async function scrape() {
 
     const name = heading.replace(/^\d+\.\s*/, '').trim();
 
-    // First sibling <p> after the heading is the description.
-    const description = $(el).next('p').text().trim();
+    // First sibling <div> after the heading is the description.
+    // The live HTML uses Breakdance <div class="bde-text-*"> wrappers, not <p> tags.
+    const description = $(el).next('div').text().trim();
 
-    // Price is the first <p> between this h3 and the next h3
-    // whose text matches the "NNN,-" Norwegian price pattern.
+    // Price is in a sibling <div> of the h3's parent div that matches "NNN,-".
+    // Structure: h3 > (parent inner div) > (outer div) > price div sibling
+    // Strategy: search $(el).parent().parent() children for a div containing NNN,-
     const priceEl = $(el)
-      .nextUntil('h3', 'p')
-      .filter((_, p) => /\d+,-/.test($(p).text()))
+      .parent()
+      .parent()
+      .find('div')
+      .filter((_, p) => /^\s*\d+,-\s*$/.test($(p).text()))
       .first();
     const priceText = priceEl.text().trim();
     const price_nok = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
