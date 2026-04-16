@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. menu.json is listed in .gitignore and not tracked in version control
 **Plans**: 2 plans
 - [x] 01-01-PLAN.md — Environment setup, Astro scaffold, and .gitignore for DATA-04
-- [ ] 01-02-PLAN.md — Scraper implementation + prebuild wiring for DATA-01/02/03
+- [x] 01-02-PLAN.md — Scraper implementation + prebuild wiring for DATA-01/02/03
 
 ### Phase 2: App & Filters
 **Goal**: Users can open the app, spin for a random pizza, and filter by diet preference

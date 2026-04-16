@@ -7,10 +7,10 @@
 
 ### Data Pipeline
 
-- [ ] **DATA-01**: Build-time scraper fetches ZZ Pizza's menu from their website and writes structured JSON
-- [ ] **DATA-02**: Scraped data includes pizza name, description, price (as integer NOK), and vegetarian flag
-- [ ] **DATA-03**: Build fails with an error if scraper returns 0 items (no silent failure)
-- [ ] **DATA-04**: menu.json is committed to .gitignore (not tracked in git)
+- [x] **DATA-01**: Build-time scraper fetches ZZ Pizza's menu from their website and writes structured JSON
+- [x] **DATA-02**: Scraped data includes pizza name, description, price (as integer NOK), and vegetarian flag
+- [x] **DATA-03**: Build fails with an error if scraper returns 0 items (no silent failure)
+- [x] **DATA-04**: menu.json is committed to .gitignore (not tracked in git)
 
 ### Core Interaction
 
@@ -60,10 +60,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 1 | Pending |
-| DATA-02 | Phase 1 | Pending |
-| DATA-03 | Phase 1 | Pending |
-| DATA-04 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Complete |
+| DATA-02 | Phase 1 | Complete |
+| DATA-03 | Phase 1 | Complete |
+| DATA-04 | Phase 1 | Complete |
 | CORE-01 | Phase 2 | Pending |
 | CORE-02 | Phase 2 | Pending |
 | CORE-03 | Phase 2 | Pending |
