@@ -42,7 +42,7 @@ Declared values (multiples of 4):
 | 2xl | 48px | Top/bottom viewport centering inset on desktop |
 | 3xl | 64px | Not used in this phase |
 
-Exceptions: Touch targets for filter pills must be minimum 44px tall (accessibility — iOS guideline). Achieved by combining `py-2` (8px) + `text-sm` line height, plus explicit `min-h-[44px]` if needed.
+Exceptions: Touch targets for filter pills must be minimum 44px tall (accessibility — iOS guideline). Achieved by combining `py-2` (8px) + `text-sm` line height, plus explicit `min-h-[48px]` if needed. 48px is a multiple of 4 and exceeds the 44px minimum, satisfying both grid alignment and accessibility.
 
 ---
 
@@ -51,7 +51,7 @@ Exceptions: Touch targets for filter pills must be minimum 44px tall (accessibil
 | Role | Size | Weight | Line Height | Tailwind class |
 |------|------|--------|-------------|----------------|
 | Body / description | 14px | 400 (regular) | 1.5 | `text-sm font-normal leading-relaxed` |
-| Label / count / badge | 14px | 500 (medium) | 1.4 | `text-sm font-medium leading-snug` |
+| Label / count / badge | 14px | 400 (regular) | 1.4 | `text-sm font-normal leading-snug` |
 | Heading / pizza name | 24px | 600 (semibold) | 1.2 | `text-2xl font-semibold leading-tight` |
 | Display / spin emoji | 48px | n/a (emoji) | 1.0 | `text-5xl` |
 
@@ -63,7 +63,7 @@ Source: CONTEXT.md D-11 (system font stack is fine) and RESEARCH.md (Claude's di
 
 **Constraints:**
 - Exactly 3 text sizes in use: 14px, 24px, 48px. The 14px Label role covers both body description text and UI labels to avoid a fourth size.
-- Exactly 2 weights: 400 (regular) for all body/description text; 600 (semibold) for pizza name heading. Filter pill labels use 500 (medium) as a mid-level label weight.
+- Exactly 2 weights: 400 (regular) for all body/description/label text; 600 (semibold) for pizza name heading only.
 
 ---
 
@@ -77,6 +77,8 @@ Source: CONTEXT.md D-11 (system font stack is fine) and RESEARCH.md (Claude's di
 | Muted text | `#737373` (neutral-500) | Description text, count text, disabled explanation text |
 | Border | `#e5e5e5` (neutral-200) | Result card border, inactive pill border |
 | Destructive | Not used in this phase | — |
+
+**Primary focal point (pre-spin):** Spin button — the only `neutral-900` element on the `neutral-50` page.
 
 **Accent reserved for:**
 1. Active filter pill — background becomes `neutral-900`, text becomes `white`
