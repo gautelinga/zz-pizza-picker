@@ -40,7 +40,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can toggle between all pizzas, vegetarian only, and meat only — and the result pool changes accordingly
   4. User sees a live count of eligible pizzas before spinning
   5. When no pizzas match the active filter, the spin button is disabled with an explanation visible
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 02-01-PLAN.md — Install Svelte 5 + Tailwind v4 toolchain, shared Pizza/Filter types, global.css entry
+- [ ] 02-02-PLAN.md — Build PizzaPicker.svelte island (filter + spin + result) and wire index.astro
+- [ ] 02-03-PLAN.md — Human-verify checkpoint: full UI + interaction + accessibility walk-through
 **UI hint**: yes
 
 ### Phase 3: Deployment
@@ -61,5 +64,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 1/2 | In Progress|  |
-| 2. App & Filters | 0/TBD | Not started | - |
+| 2. App & Filters | 0/3 | Not started | - |
 | 3. Deployment | 0/TBD | Not started | - |
