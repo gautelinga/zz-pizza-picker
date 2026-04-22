@@ -1,13 +1,20 @@
 ---
-// Placeholder index page — Phase 2 replaces this with the real picker UI.
+import PizzaPicker from '../components/PizzaPicker.svelte';
+import menuData from '../../public/menu.json';
+import type { MenuData } from '../types/pizza';
+import '../styles/global.css';
+
+// Type-narrow the JSON import so downstream changes to menu.json shape
+// surface as build errors rather than runtime surprises.
+const menu = menuData as MenuData;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ZZ Pizza Picker</title>
   </head>
-  <body>
-    <h1>ZZ Pizza Picker</h1>
-    <p>Phase 1 placeholder — picker UI arrives in Phase 2.</p>
+  <body class="min-h-screen flex items-center justify-center bg-neutral-50 text-neutral-900">
+    <PizzaPicker pizzas={menu.pizzas} client:load />
   </body>
 </html>
