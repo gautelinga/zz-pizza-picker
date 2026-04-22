@@ -54,7 +54,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. Anyone can open the app in a browser (desktop or mobile) at a public Cloudflare Pages URL
   2. The menu is automatically re-scraped and the site rebuilt on a weekly schedule via GitHub Actions
   3. The app displays the date the menu was last scraped (e.g. "Menu last updated: 7 Apr 2026")
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] 03-01-PLAN.md — Date stamp in index.astro (DEPL-03) + GitHub Actions weekly-rebuild workflow (DEPL-02)
+- [ ] 03-02-PLAN.md — Cloudflare Pages setup checkpoint + live deployment verification (DEPL-01)
 
 ## Progress
 
@@ -65,4 +67,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Data Pipeline | 1/2 | In Progress|  |
 | 2. App & Filters | 0/3 | Not started | - |
-| 3. Deployment | 0/TBD | Not started | - |
+| 3. Deployment | 0/2 | Not started | - |
