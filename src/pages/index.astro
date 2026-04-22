@@ -9,6 +9,12 @@ import '../styles/global.css';
 // Type-narrow the JSON import so downstream changes to menu.json shape
 // surface as build errors rather than runtime surprises.
 const menu = menuData as MenuData;
+
+const scrapedAt = new Date(menu.scraped_at);
+const day = scrapedAt.getUTCDate();                          // no leading zero (7, not 07)
+const month = scrapedAt.toLocaleString('en-GB', { month: 'short', timeZone: 'UTC' });
+const year = scrapedAt.getUTCFullYear();
+const lastUpdated = `Menu last updated: ${day} ${month} ${year}`;
 ---
 <html lang="en">
   <head>
@@ -18,5 +24,8 @@ const menu = menuData as MenuData;
   </head>
   <body class="min-h-screen flex items-center justify-center bg-neutral-50 text-neutral-900">
     <PizzaPicker pizzas={menu.pizzas} client:load />
+    <div class="w-full max-w-[400px] mx-auto px-4 pb-8">
+      <p class="text-sm text-neutral-400 text-center">{lastUpdated}</p>
+    </div>
   </body>
 </html>
