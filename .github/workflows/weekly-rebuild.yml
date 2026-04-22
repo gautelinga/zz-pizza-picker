@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-trigger-deploy:
+  build-and-trigger-hook:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -27,6 +27,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify build output
+        run: test -f dist/index.html
+
       - name: Trigger Cloudflare Pages deploy hook
-        if: ${{ env.CF_DEPLOY_HOOK_URL != '' }}
+        if: env.CF_DEPLOY_HOOK_URL != ''
         run: curl -X POST "$CF_DEPLOY_HOOK_URL"
