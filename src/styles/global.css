@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Project-wide defaults applied to the document body. */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
