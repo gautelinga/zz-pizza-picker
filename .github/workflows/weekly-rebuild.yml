@@ -9,6 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,7 +28,5 @@ jobs:
         run: npm run build
 
       - name: Trigger Cloudflare Pages deploy hook
-        if: ${{ secrets.CF_DEPLOY_HOOK_URL != '' }}
+        if: ${{ env.CF_DEPLOY_HOOK_URL != '' }}
         run: curl -X POST "$CF_DEPLOY_HOOK_URL"
-        env:
-          CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
