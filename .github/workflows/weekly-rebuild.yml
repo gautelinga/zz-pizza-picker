@@ -24,3 +24,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Trigger Cloudflare Pages deploy hook
+        if: ${{ secrets.CF_DEPLOY_HOOK_URL != '' }}
+        run: curl -X POST "$CF_DEPLOY_HOOK_URL"
+        env:
+          CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
