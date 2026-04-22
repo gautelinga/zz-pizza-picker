@@ -9,10 +9,13 @@
     "scrape": "node scripts/scrape.js",
     "prebuild": "npm run scrape",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "npm run build && wrangler dev",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.10",
     "@astrojs/svelte": "^8.0.5",
     "@tailwindcss/vite": "4.2.2",
     "astro": "^6.1.4",
@@ -22,6 +25,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.84.1"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
