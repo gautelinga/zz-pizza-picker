@@ -396,17 +396,17 @@ Root directory:      (leave blank — repo root)
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **CF Pages project name availability**
    - What we know: D-10 specifies `zz-pizza-picker` as the desired name
    - What's unclear: Whether another CF user has already claimed `zz-pizza-picker.pages.dev`
-   - Recommendation: Plan should note that if the name is taken, any sensible alternative (e.g., `zz-pizza-picker-oslo`, `pizza-picker-zz`) is acceptable per Claude's Discretion
+   - RESOLVED: Plan should note that if the name is taken, any sensible alternative (e.g., `zz-pizza-picker-oslo`, `pizza-picker-zz`) is acceptable per Claude's Discretion
 
 2. **`menu.json` absent during CF build's first install step**
    - What we know: `public/menu.json` is in `.gitignore`, so it is not committed. CF clones the repo, runs `npm install`, then `npm run build` (which triggers `prebuild` = scraper). This means the scraper runs and writes `menu.json` before `astro build` needs it. The ordering is correct.
    - What's unclear: Whether CF's network environment can reach `https://zz.pizza/gamlebyen/` without restriction
-   - Recommendation: No action needed — CF Pages build workers have outbound internet access. If the scraper ever fails, the CF build log will show the error clearly.
+   - RESOLVED: No action needed — CF Pages build workers have outbound internet access. If the scraper ever fails, the CF build log will show the error clearly.
 
 ---
 
