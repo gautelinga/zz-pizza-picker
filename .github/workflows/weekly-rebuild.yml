@@ -1,0 +1,19 @@
+# .github/workflows/weekly-rebuild.yml
+# Triggers a Cloudflare Pages rebuild on a weekly schedule (DEPL-02).
+# CF Pages does the actual build — this job only fires the deploy hook.
+# Per D-07, D-08, D-11 in 03-CONTEXT.md.
+name: Weekly menu rebuild
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Monday 06:00 UTC — fresh for the week (D-11)
+  workflow_dispatch:        # Allow manual trigger for smoke-testing the hook
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy hook
+        run: curl -X POST "$CF_DEPLOY_HOOK_URL"
+        env:
+          CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
