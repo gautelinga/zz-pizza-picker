@@ -13,11 +13,11 @@
     return pizzas;
   });
 
-  // Clear any displayed result when the filter changes (RESEARCH.md Pitfall 5).
-  $effect(() => {
-    activeFilter; // track filter as a dependency
+  // Reset result when filter changes, co-located with the state change (no $effect needed).
+  function setFilter(f: Filter) {
+    activeFilter = f;
     result = null;
-  });
+  }
 
   function spin() {
     if (spinning) return;                       // guard re-entry (Pitfall 3)
@@ -57,7 +57,7 @@
         class:border-neutral-200={activeFilter !== f.id}
         class:hover:bg-neutral-200={activeFilter !== f.id}
         aria-pressed={activeFilter === f.id}
-        onclick={() => (activeFilter = f.id)}
+        onclick={() => setFilter(f.id)}
       >
         {f.label}
       </button>
