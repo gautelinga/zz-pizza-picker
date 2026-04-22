@@ -22,7 +22,7 @@ const lastUpdated = `Menu last updated: ${day} ${month} ${year}`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ZZ Pizza Picker</title>
   </head>
-  <body class="min-h-screen flex items-center justify-center bg-neutral-50 text-neutral-900">
+  <body class="min-h-screen flex flex-col items-center justify-center bg-neutral-50 text-neutral-900">
     <PizzaPicker pizzas={menu.pizzas} client:load />
     <div class="w-full max-w-[400px] mx-auto px-4 pb-8">
       <p class="text-sm text-neutral-400 text-center">{lastUpdated}</p>
