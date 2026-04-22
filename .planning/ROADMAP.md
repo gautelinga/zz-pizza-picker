@@ -41,9 +41,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. User sees a live count of eligible pizzas before spinning
   5. When no pizzas match the active filter, the spin button is disabled with an explanation visible
 **Plans**: 3 plans
-- [ ] 02-01-PLAN.md — Install Svelte 5 + Tailwind v4 toolchain, shared Pizza/Filter types, global.css entry
-- [ ] 02-02-PLAN.md — Build PizzaPicker.svelte island (filter + spin + result) and wire index.astro
-- [ ] 02-03-PLAN.md — Human-verify checkpoint: full UI + interaction + accessibility walk-through
+- [x] 02-01-PLAN.md — Install Svelte 5 + Tailwind v4 toolchain, shared Pizza/Filter types, global.css entry
+- [x] 02-02-PLAN.md — Build PizzaPicker.svelte island (filter + spin + result) and wire index.astro
+- [x] 02-03-PLAN.md — Human-verify checkpoint: full UI + interaction + accessibility walk-through
 **UI hint**: yes
 
 ### Phase 3: Deployment
