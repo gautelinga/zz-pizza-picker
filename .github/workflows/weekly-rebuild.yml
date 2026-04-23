@@ -5,6 +5,8 @@
 name: Weekly menu rebuild
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: '0 6 * * 1'   # Monday 06:00 UTC — fresh for the week (D-11)
   workflow_dispatch:        # Allow manual trigger for smoke-testing the hook
