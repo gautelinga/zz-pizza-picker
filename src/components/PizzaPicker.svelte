@@ -44,6 +44,7 @@
       <a href="https://zz.pizza" target="_blank" rel="noopener noreferrer" class="hover:underline underline-offset-2">ZZ Pizza</a> Picker
     </h1>
     <p class="text-sm font-normal leading-snug text-neutral-500 text-center">One tap. One pizza. No regrets.</p>
+    <p class="text-xs font-normal leading-snug text-neutral-400 text-center">One of the best pizza places in Gamlebyen, Oslo.</p>
   </div>
 
   <div class="flex gap-1 justify-center" role="group" aria-label="Filter pizzas by diet">
