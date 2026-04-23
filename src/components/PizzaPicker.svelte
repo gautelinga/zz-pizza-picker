@@ -40,7 +40,9 @@
 
 <section class="w-full max-w-[400px] mx-auto px-4 py-8 flex flex-col gap-6">
   <div class="flex flex-col gap-1 items-center">
-    <h1 class="text-2xl font-semibold leading-tight text-neutral-900 text-center">ZZ Pizza Picker</h1>
+    <h1 class="text-2xl font-semibold leading-tight text-neutral-900 text-center">
+      <a href="https://zz.pizza" target="_blank" rel="noopener noreferrer" class="hover:underline underline-offset-2">ZZ Pizza</a> Picker
+    </h1>
     <p class="text-sm font-normal leading-snug text-neutral-500 text-center">One tap. One pizza. No regrets.</p>
   </div>
 
