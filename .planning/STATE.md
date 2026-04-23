@@ -78,6 +78,12 @@ None yet.
 
 None yet.
 
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260423-qq7 | Add a link to ZZ Pizza homepage (https://zz.pizza) in the web app | 2026-04-23 | dd21e39 | [260423-qq7-add-link-to-zz-pizza-homepage](./quick/260423-qq7-add-link-to-zz-pizza-homepage/) |
+
 ## Session Continuity
 
 Last session: --stopped-at
