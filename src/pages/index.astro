@@ -24,8 +24,9 @@ const lastUpdated = `Menu last updated: ${day} ${month} ${year}`;
   </head>
   <body class="min-h-screen flex flex-col items-center justify-center bg-neutral-50 text-neutral-900">
     <PizzaPicker pizzas={menu.pizzas} client:load />
-    <div class="w-full max-w-[400px] mx-auto px-4 pb-8">
+    <div class="w-full max-w-[400px] mx-auto px-4 pb-8 flex flex-col items-center gap-1">
       <p class="text-sm text-neutral-400 text-center">{lastUpdated}</p>
+      <a href="https://zz.pizza" target="_blank" rel="noopener noreferrer" class="text-sm text-neutral-400 hover:text-neutral-600 underline underline-offset-2 transition-colors">zz.pizza</a>
     </div>
   </body>
 </html>
